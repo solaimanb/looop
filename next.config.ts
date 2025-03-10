@@ -1,7 +1,14 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  reactStrictMode: true,
+  images: {
+    domains: [""],
+    minimumCacheTTL: 60,
+  },
+  experimental: {
+    optimizePackageImports: ["shadcn/ui"],
+  },
 };
 
 export default nextConfig;
