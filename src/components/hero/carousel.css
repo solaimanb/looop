@@ -1,0 +1,262 @@
+/* Custom styles for the carousel that match the provided design */
+
+/* Font family definitions */
+.font-bebas-neue {
+  font-family: var(--font-bebas-neue);
+  letter-spacing: 0.02em;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+  margin-bottom: 8px;
+}
+
+.swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #cccccc;
+  opacity: 1;
+  transition: all 0.3s ease;
+  margin: 0 4px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000000;
+}
+
+/* Custom Swiper styles for the coverflow effect */
+.swiper-carousel-container {
+  width: 100%;
+  padding: 30px 0 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.mySwiper {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  overflow: visible;
+}
+
+/* Adjusting the slide sizes to exactly match the reference image */
+.custom-slide {
+  background-position: center;
+  background-size: cover;
+  border-radius: 28px;
+  transition: all 0.3s ease;
+}
+
+/* Default slide size */
+.swiper-slide {
+  width: 300px !important;
+  height: 520px !important;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+
+/* Adjacent slides */
+.swiper-slide-prev,
+.swiper-slide-next {
+  width: 340px !important;
+  height: 520px !important;
+  opacity: 0.85;
+}
+
+/* Center active slide */
+.swiper-slide-active {
+  width: 380px !important;
+  height: 560px !important;
+  opacity: 1;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Outer slides */
+.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+  width: 240px !important;
+  height: 480px !important;
+  opacity: 0.6;
+}
+
+/* Content styling */
+.slide-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+/* Active slide styling */
+.active-slide {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Product card header with product name */
+.card-header {
+  padding: 1rem;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+}
+
+.card-header h3 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Card footer with button */
+.card-footer {
+  width: 100%;
+  overflow: hidden;
+  border-bottom-left-radius: 28px;
+  border-bottom-right-radius: 28px;
+}
+
+.card-footer a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+/* Product image container */
+.slide-content .relative {
+  overflow: hidden;
+}
+
+/* Product image hover effect */
+.slide-content .relative img {
+  transition: transform 0.5s ease;
+}
+
+.slide-content:hover .relative img {
+  transform: scale(1.05);
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  pointer-events: none;
+  padding: 0 20px;
+}
+
+.carousel-nav-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 9999px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+  z-index: 10;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  pointer-events: auto;
+  cursor: pointer;
+  border: none;
+}
+
+.carousel-nav-button:hover {
+  opacity: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-nav-button-prev {
+  left: 20px;
+}
+
+.carousel-nav-button-next {
+  right: 20px;
+}
+
+/* Animation for fadeIn effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .swiper-slide {
+    width: 260px !important;
+    height: 480px !important;
+  }
+  
+  .swiper-slide-active {
+    width: 320px !important;
+    height: 520px !important;
+  }
+  
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    width: 280px !important;
+    height: 500px !important;
+  }
+  
+  .swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next) {
+    width: 200px !important;
+    height: 460px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-carousel-container {
+    padding: 20px 0 50px;
+  }
+  
+  .swiper-slide {
+    width: 220px !important;
+    height: 440px !important;
+  }
+  
+  .swiper-slide-active {
+    width: 260px !important;
+    height: 480px !important;
+  }
+  
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    width: 240px !important;
+    height: 460px !important;
+  }
+  
+  .carousel-nav-button-prev {
+    left: 10px;
+  }
+  
+  .carousel-nav-button-next {
+    right: 10px;
+  }
+} 
