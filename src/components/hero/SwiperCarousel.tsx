@@ -55,7 +55,7 @@ const products: Product[] = [
     description: "Ultra-modern windbreaker with tech fleece lining",
     price: "$159.99",
     image:
-      "https://i.pinimg.com/736x/66/a4/1b/66a41ba552188a2f6549afd3e4e2bdb3.jpg",
+      "https://i.pinimg.com/736x/b1/0c/7c/b10c7c11f026ffdcabe38d6dae99f593.jpg",
     buttonText: "Add to Cart",
     buttonLink: "/shop/jackets/tech-windbreaker",
   },
