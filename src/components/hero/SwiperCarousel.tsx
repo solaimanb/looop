@@ -213,7 +213,7 @@ export default function SwiperCarousel() {
           swiperRef.current = swiper;
         }}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
           disableOnInteraction: false,
         }}
         speed={600}
