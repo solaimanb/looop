@@ -22,6 +22,12 @@ A modern, interactive product carousel implementation built with Next.js, featur
 - ✨ Type Safety with TypeScript
 - 🖌️ Optimized images using Next.js Image component
 
+## Changelog
+
+All notable changes to this project are documented in the [CHANGELOG.md](CHANGELOG.md) file.
+- Current version: 1.0.0 (Released: March 19, 2025)
+- View all [releases and tags](https://github.com/solaimanb/looop/releases)
+
 ## Live Demo
 
 🌐 [View the Live Demo](https://looop-co.vercel.app)
