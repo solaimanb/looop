@@ -1,22 +1,16 @@
 "use client";
 
 import React, { useRef, useState } from "react";
-// Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
 import "./carousel.css";
 
-// Import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 import Image from "next/image";
 
-// Define the product type
 type Product = {
   id: string;
   name: string;
@@ -27,7 +21,6 @@ type Product = {
   buttonLink: string;
 };
 
-// Sample product data with modern jackets
 const products: Product[] = [
   {
     id: "1",
@@ -225,7 +218,6 @@ export default function SwiperCarousel() {
                 products[activeIndex].id === product.id ? "active-slide" : ""
               }`}
             >
-              {/* Product image - shown on all slides */}
               <div className="relative h-full w-full overflow-hidden">
                 <Image
                   src={product.image}
@@ -237,7 +229,6 @@ export default function SwiperCarousel() {
                 />
               </div>
 
-              {/* Product details - only shown on active (center) slide */}
               {products[activeIndex].id === product.id && (
                 <div className="absolute inset-0 flex flex-col bg-black/20">
                   <div className="card-header flex items-center justify-center">
@@ -260,10 +251,8 @@ export default function SwiperCarousel() {
         ))}
       </Swiper>
 
-      {/* Custom pagination */}
       <div className="swiper-pagination"></div>
 
-      {/* Navigation buttons */}
       <div className="navigation-buttons">
         <button
           className="carousel-nav-button carousel-nav-button-prev"
